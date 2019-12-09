@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List City</title>
+</head>
+<body>
+<div id="wrapper">
+    <th:block th:each="city:${city}">
+        <h1>Thành Phố <p th:text="${city.name}"></p></h1>
+        <p>
+            <a href="/citys">Danh sách thành phố</a>
+        </p>
+        <p th:text="${city.name}"></p>
+        <p th:text="${city.country}"></p>
+        <p th:text="${city.area}"></p>
+        <p th:text="${city.population}"></p>
+        <p th:text="${city.gdp}"></p>
+        <p th:text="${city.title}"></p>
+    </th:block>
+</div>
+</body>
